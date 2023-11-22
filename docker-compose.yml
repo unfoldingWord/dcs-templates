@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  server:
+    image: unfoldingword/dcs:1.20-nightly
+    container_name: dcs-templates
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+    restart: always
+    volumes:
+      - ./conf:/data/gitea/conf
+      - ./templates:/data/gitea/templates
+    ports:
+      - "3000:3000"
