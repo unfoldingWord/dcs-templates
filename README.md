@@ -47,4 +47,4 @@ The availability of [git](https://git-scm.com/download) is also needed.
     **username:** root \
     **password:** password
 
-7. In the terminal where you started docker, to see any new changes, especially to newly added template files, you may need to bring it down with CTRL-C (or Command-C on Mac) and start it up again with `docker compose up`.
+7. In the terminal where you started docker, to see any new changes, especially to newly added template files, you may need to bring it down with `CTRL-C` (or `Command-C` on Mac) and start it up again with `docker compose up`.
