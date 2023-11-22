@@ -35,7 +35,7 @@ The availability of [git](https://git-scm.com/download) is also needed.
 4. Run docker compose:
 
     ```
-    docker compuse up
+    docker compose up
     ```
 
     Keep this running in the terminal
