@@ -42,7 +42,7 @@ The availability of [git](https://git-scm.com/download) is also needed.
 
 5. Go to https://localhost:3000 in your web browser and you should see the home page.
 
-6. Go to the page you modified if not the home page. If you need to log in, register a user, or user the admin user that is already set up:
+6. Go to the page you modified if not the home page. If you need to log in, register a user, or use the admin user that is already set up:
 
     **username:** root \
     **password:** password
