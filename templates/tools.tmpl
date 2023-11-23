@@ -1,14 +1,6 @@
 {{template "base/head" .}}
 <style>
 /*** FROM HOME ***/
-.main-content {
-  font-size: 18px;
-  color: black;
-  font-family: Inter, sans-serif;
-  font-weight: 400;
-  word-wrap: break-word;
-}
-
 .container-width {
   max-width: 1364px;
   margin: 0 auto;
@@ -16,28 +8,6 @@
   padding-right: 32px;
   width: 100%;
 }
-
-.bg-gradient {
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: linear-gradient(180deg, #ecf2cc 0%, transparent 100%);
-  position: absolute;
-}
-
-.bg-image {
-  background-image: url(assets/img/dcs/bg.png);
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: 1800px;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 .card-block {
   color: white;
   min-height: 800px;
@@ -176,9 +146,6 @@
 }
 
 @media (max-width: 1180px) {
-  .bg-image {
-    background-size: 1200px;
-  }
   .card-block {
     padding-top: 200px;
   }
@@ -209,9 +176,6 @@
 }
 
 @media (max-width: 767px) {
-  .bg-image {
-    background-size: 700px;
-  }
   .card-block {
     padding: 250px 32px 0px 32px;
   }
@@ -325,7 +289,11 @@
   font-weight: 400;
   font-family: Inter, sans-serif;
   word-wrap: break-word;
-  margin-bottom: 80px;
+  padding-bottom: 80px;
+  background-color: white;
+}
+.full.height {
+  padding-bottom: 0 !important;
 }
 .tools-header {
   font-size: 36px;
