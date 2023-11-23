@@ -296,6 +296,207 @@
     font-size: 18px;
   }
 }
+
+/*** FROM TOOLS ***/
+.container-width {
+  padding: 0 20px 0 20px;
+}
+.tools-bg {
+  padding: 156px 0px 254px;
+  color: white;
+  background: url(assets/img/dcs/tools.jpg);
+  background-position: 53% 28%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.tools-bg .card {
+  width: 60%;
+  padding: 32px;
+}
+.tools-bg h1 {
+  font-weight: 600;
+  font-size: 40px;
+  margin-bottom: 24px;
+}
+.tools-content {
+  color: #1e1e1e;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: Inter, sans-serif;
+  word-wrap: break-word;
+  margin-bottom: 80px;
+}
+.tools-header {
+  font-size: 36px;
+  font-weight: 800;
+  margin-top: 150px;
+  margin-bottom: 24px;
+}
+.tools {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px 32px;
+}
+.tool {
+  padding: 32px 32px 0px;
+  background: #f4f4f4;
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 360px;
+}
+.tool-title {
+  color: #aac906;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  margin-right: 24px;
+}
+.tool-subtitle {
+  font-weight: 600;
+}
+.tool-content {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  flex-grow: 1;
+}
+.tool-more {
+  padding: 24px;
+  border-top: 1px solid #333;
+  text-align: center;
+  cursor: pointer;
+}
+.tool-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.tool-button {
+  display: block;
+  padding: 12px;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  background-color: white;
+  font-weight: 600;
+  color: #333;
+}
+.tool-button:hover {
+  background-color: #aac906;
+  color: white;
+  text-decoration: none;
+}
+.tool-link {
+  text-decoration: underline;
+  color: #1e1e1e;
+}
+.tool-link:hover {
+  color: #78b4ef;
+}
+.tool-content ul li {
+  padding-top: 8px;
+}
+.extra {
+  /* display: none; */
+  padding: 32px;
+  overflow: hidden;
+  background: #333333;
+  border-radius: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 4px 104px #0008;
+  color: white;
+  z-index: 2;
+  visibility: hidden;
+  max-height: 100%;
+  opacity: 0;
+  transition: opacity 0.25s, visibility 0s 0.25s, max-height 0s 0.25s;
+}
+.extra.show {
+  /* display: block; */
+  max-height: 400%;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.25s, visibility 0s, max-height 0s;
+}
+
+.extra-close {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  width: 24px;
+  height: 24px;
+  opacity: 0.3;
+  cursor: pointer;
+}
+.extra-close:hover {
+  opacity: 1;
+}
+.extra-close:before,
+.extra-close:after {
+  position: absolute;
+  left: 11px;
+  content: ' ';
+  height: 25px;
+  width: 2px;
+  background-color: white;
+}
+.extra-close:before {
+  transform: rotate(45deg);
+}
+.extra-close:after {
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 1180px) {
+  .tools-bg {
+    background-position: 69% 28%;
+  }
+  .tools {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991px) {
+  .tools-bg {
+    background-position: 73% 28%;
+  }
+  .tools-bg .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .tools-bg {
+    background-position: 80% 28%;
+    padding: 100px 0px 200px;
+  }
+  .tools {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .tools-header,
+  .tools-bg h1 {
+    font-size: 32px;
+  }
+  .tools-bg .card {
+    background-color: #333333;
+  }
+}
+
+@media (max-width: 575px) {
+  .tools-bg .card {
+    padding: 16px;
+  }
+  .tool,
+  .extra {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+/*** END FROM TOOLS ***/
 </style>
     <div class="main-content">
       <div class="card-block">
@@ -307,7 +508,7 @@
             <h3 class="card-header">How do I start?</h3>
             <div class="card-content">
               <p>
-                First <a href="https://git.door43.org/user/sign_up" class="card-link">register</a> for a
+                First <a href="{{AppSubUrl}}/user/sign_up" class="card-link">register</a> for a
                 Door43 account. This account can both be used here on DCS
                 and in apps that connect to DCS
               </p>
@@ -316,7 +517,7 @@
                   class="card-link">translationCore</a> to start translating. Both applications allow you to
                 synchronize
                 your work with DCS.</p>
-              <a class="register-button" href="https://git.door43.org/user/sign_up">Register now</a>
+              <a class="register-button" href="{{AppSubUrl}}/user/sign_up">Register now</a>
             </div>
           </div>
           <div class="card">
@@ -326,7 +527,7 @@
                 any language.</p>
               <p>DCS is an open project that is managed by unfoldingWord and many volunteers.</p>
               <p>Every change made in DCS is automatically being processed into a web page on <a
-                  href="https://door43.org" target="_blank" class="card-link">Door43</a>.</p>
+                  href="https://door43.org/en/" target="_blank" class="card-link">Door43</a>.</p>
             </div>
           </div>
           <div class="card">
@@ -341,7 +542,7 @@
                   class="card-link">DCS knowledgebase articles</a>.
               </p>
               <p>If you are a developer, you can connect your own tool or script to the <a
-                  href="https://git.door43.org/api/swagger" target="_blank" class="card-link">DCS API</a>. We have
+                  href="{{AppSubUrl}}/api/swagger" target="_blank" class="card-link">DCS API</a>. We have
                 already
                 prepared a <a href="https://github.com/unfoldingWord/python-dcs-api-client" target="_blank"
                   class="card-link">Python DCS API client</a> for you.</p>
@@ -349,7 +550,7 @@
           </div>
         </div>
       </div>
-      <div id="stats" class="stats-block container-width" >
+      <div id="stats" class="stats-block container-width">
         <div class="stats">
           <div class="stat" data-tooltip-content="Total number of repositories">
         	<div class="stat-title"><a href="{{AppSubUrl}}/explore/repos">repositories</a></div>
